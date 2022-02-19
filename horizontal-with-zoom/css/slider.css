@@ -1,0 +1,226 @@
+-/*
+Theme Name: Animal Filmes Template
+Author: Joao Perigo as the coder and Victor Tosh as the designer
+Author URI: https://joaoperigo.com.br and victortoush.com
+Description: Template Animal Filmes
+Version: 0.6
+
+*/
+
+/*reset*/
+* { margin: 0; padding: 0;}
+input, textarea {
+    font-weight: 100;
+    outline: none;
+    border-width: 0;
+}
+html, body {height:100%; margin: 0; padding: 0;}
+
+
+img,
+picture,
+video,
+embed {
+   max-width: 100%;
+       height: auto;
+}
+
+
+/*Slider*/
+.embed { /*if embeded content*/
+    position: relative;
+    transform-origin: center;
+    /*transform: translateX(20px) scale(1.4) ;*/
+    transform: translateX(0) scale(1.3) ;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.embed iframe {
+    width: 100%;
+    height: 100%;
+        z-index: -100;
+}
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.slider-wrapper {
+    width: 100%;
+    overflow-y: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;/*ver como ajustar alinhamento vettical*/
+}
+.slider-wrapper-wrapper {
+    left: 50%;
+       top:50%;
+    position:absolute; 
+}
+.img-slider {
+    position:relative; /*fazer em jquery?*/ 
+    left:-50%;
+    top: -540px;
+    min-width: 1920px;
+    min-height: 1080px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.img-slider-mascara {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+
+  top: 55%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -49%) scale(1.05,1.05);
+    opacity: 0.8;
+    /*ver como ajustar alinhamento vettical*/
+
+}
+.wrapper-bola {
+    position: fixed;
+    right: 5%;
+    z-index: 4;
+    bottom: 5%;
+    display: block;
+}
+.wrapper-bola a{
+    
+    display: block;
+    margin-bottom: 1.3em;
+}
+
+.address-slider {
+ 
+}
+
+.bola {
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  height: 1.2em;
+  width: 1.2em;
+  border: solid #bbb 0.1em;
+  border-radius: 50%;
+  display: inline-block;
+}
+.bola:hover {
+  border: solid #bbb 0.3em;
+  border-radius: 50%;
+}
+.bola-ativada {
+        background-color: #e6efd2;
+}
+.link-bola { /*delimita tag <a>*/
+       border-radius: 1.2em;
+    width: 1.2em;
+    height: 1.2em;   
+}
+.wrapper-slider-navigation {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 10%;
+    left: 0;
+    z-index: 3;
+}
+.wrapper-address-slider {
+    width: 4em;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4em 0.6% 0 ; 
+}
+.address-slider a img{
+    width: 100%;
+}
+
+
+.slider-size {
+    min-height: 97%; /*ajusta altura slider*/
+    z-index: 10;
+    position: relative;
+    background-color: transparent;
+}
+
+
+
+/* ---------  SLIDER POST -------- */
+.wrapper-slider-post {
+ overflow: hidden;
+max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+.wrapper-overflow {
+
+    height: 100%;
+	width: 9600px;/*valor relativo js*/
+	overflow-x: auto;
+        white-space: nowrap;
+        overflow-y: hidden;
+}
+.slider-item-post { 
+	float: left;
+	width:1920px; /*valor relativo js*/
+	height: 100%;
+	position: relative;
+}
+.slider-item-post img{ 
+width:100%; height:auto;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.slider-posts-bolinha {
+	position: fixed;
+	bottom: 10%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	transition-delay: 2s;
+}
+.slider-posts-bolinha a {
+    border-radius: 1.2em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 1.5%;
+}
+
+.slider-posts-bolinha a:last-child {
+	margin-right: 0;
+}
+.bola-slider-post {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 1.2em;
+    width: 1.2em;
+    border: solid #bbb 0.1em;
+    border-radius: 50%;
+    display: inline-block;
+    /*box-shadow: 1px 0 1px #323042;*/
+}
+.bola-slider-post:hover {
+  border: solid #bbb 0.3em;
+  border-radius: 50%;
+}
+.menos-zoom-slider-post {
+    cursor: zoom-out;
+}
+.bola-ativada-slider-post {
+     background-color: #e6efd2;
+}
+
+.clear:after {
+    clear: both;
+    content: "";
+    display: table;
+}

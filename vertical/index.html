@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <title>Simple Vertical Slider</title>
+
+        <meta name="description" content="Simple vertical slider with jquery and css.">
+
+        <link href="css/slider.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
+
+</head>
+
+<body>
+        <!-- SLIDER -->
+        <section class="slider">
+
+                <!-- DOTS -->
+                <div class="wrapper-dot">
+                        <a class="link-dot link-dot1" href="#img1"><span class="dot dot-ativada"></span></a>
+
+                        <a class="link-dot link-dot2" href="#img2"><span class="dot"></span></a>
+
+                        <a class="link-dot link-dot3" href="#img3"><span class="dot"></span></a>
+
+                        <a class="link-dot link-dot4" href="#img4"><span class="dot"></span></a>
+                </div>
+
+        </section>
+
+        <div class="slider-wrapper parallax">
+                <div class="slider-wrapper-wrapper clear">
+                        <img src="img/1.svg" class="destacada-slider img-slider" id="img1">
+                        <img src="img/2.svg" class="destacada-slider img-slider" id="img2">
+                        <img src="img/3.svg" class="destacada-slider img-slider" id="img3">
+                        <img src="img/4.svg" class="destacada-slider img-slider" id="img4">
+                </div>
+        </div>
+
+
+        <!-- this element set the height of slide-->
+        <div class="slider-size">
+        </div>
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.localScroll.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/slider.js"></script>
+</body>
+
+</html>
