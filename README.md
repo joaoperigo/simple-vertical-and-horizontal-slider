@@ -1,4 +1,4 @@
-# Very Simple Vertical Slider
+# Very Simple Vertical and Horizontal Slider
 Simple vertical and horizontal slider for study basics features for this kind of tool - HTML, CSS, JQUERY and scrollto, by Ariel Flesler
 
 ## Concept
