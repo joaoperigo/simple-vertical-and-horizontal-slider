@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+        <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+                <!-- usar yoast ou inserir get_page_meta_description()... -->
+
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+                <title>Slider Vertical</title>
+
+                <!-- APAGAR <meta name="description" content="ANIMAL FILMES - First Class Production Services and Creative Partnerships"> APGAR ou usar tambem bloginfo('name') -->
+                <meta name="description" content="Slider vertical simples com jquery e css.">
+
+                <link href="https://fonts.googleapis.com/css?family=Catamaran:100,400,700,900" rel="stylesheet">
+                
+                <link href="css/slider.css" rel="stylesheet">
+
+                <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+                <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+        </head>
+        <body>
+<!--                <div class="degrade-topo-fixo"></div>-->
+
+                <!-- SLIDER -->    
+                <section class="slider">
+
+                        <!-- mascara
+<img class="img-slider-mascara parallax55" src="<?php bloginfo('template_url'); ?>/img/mascara-animal.svg" data-speed="30">  -->
+
+                        <!-- mascara mobile
+<img class="mascara-celular" src="<?php bloginfo('template_url'); ?>/img/mascara-celular.svg" data-speed="30">-->
+
+                        <!-- bolinhas --> 
+                        <div class="wrapper-bola">
+                                <a class="link-bola link-bola1" href="#img1"><span class="bola bola-ativada"></span></a>
+
+                                <a class="link-bola link-bola2" href="#img2"><span class="bola"></span></a>
+                                
+                                <a class="link-bola link-bola3" href="#img3"><span class="bola"></span></a>
+                                
+                                <a class="link-bola link-bola4" href="#img4"><span class="bola"></span></a>
+                        </div>
+
+
+
+                </section>
+
+                <div class="slider-wrapper parallax" data-speed="10">
+                        <div class="slider-wrapper-wrapper clear">
+                                <img src="img/1.svg" class="destacada-slider img-slider" id="img1">
+                                <img src="img/2.svg" class="destacada-slider img-slider" id="img2">
+                                <img src="img/3.svg" class="destacada-slider img-slider" id="img3">
+                                <img src="img/4.svg" class="destacada-slider img-slider" id="img4">
+                        </div>
+                </div>
+                
+                
+                <!-- div generico 100% de altura -->
+                <div class="slider-size">
+                </div>
+                
+                
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/jquery.localScroll.min.js"></script>
+                <script src="js/jquery.scrollTo.min.js"></script>
+                <script src="js/slider.js"></script>
+        </body>
+</html>
