@@ -1,6 +1,3 @@
-/*-------SLIDER------*/
-//Joao Perigo 
-
 // INIT jquery - LocalScroll (and scrollTo?) plugin 
 jQuery(function( $ ){
     /**
@@ -31,141 +28,139 @@ jQuery(function( $ ){
     });
 });
 
-
+/*-------SLIDER------*/
+//AUTHOR: Joao Perigo 
 
 //loop slider restart
 var checaIntervalo;
 
-//change ball´s color: $( ".link-bola" ).find( ".bola" ).css( "background-color", "trasnparent" );
+//change ball´s color: $( ".link-dot" ).find( ".dot" ).css( "background-color", "trasnparent" );
 
-$( ".bola" ).click(function() {
+$( ".dot" ).click(function() {
 
-    //reset interval autoloop
-    clearTimeout(checaIntervalo);
-    checaIntervalo = window.setTimeout(slideEm, 3000);
+    //the slide can be auto played, but is a little buggy
+    //reset interval autoloop 
+    //clearTimeout(checaIntervalo);
+    //checaIntervalo = window.setTimeout(slideEm, 3000);
 
-
-
-    $('.bola').removeClass('bola-ativada');
-    if ( $( this ).hasClass( "bola-ativada" ) ) {
-        $(this).removeClass("bola-ativada");
+    //when slide change, change dots activated
+    $('.dot').removeClass('dot-ativada');
+    if ( $( this ).hasClass( "dot-ativada" ) ) {
+        $(this).removeClass("dot-ativada");
     }
     else{
-        $(this).addClass("bola-ativada");
+        $(this).addClass("dot-ativada");
     }
+
 });
 
+//At the time I did this slider I did not know about each method in js, so I had to declare each dot
 //automatic slider
 function slideEm() {
 
     //check balls 
-    if( $( '.link-bola' ).hasClass( "link-bola6" ) ) {
+    if( $( '.link-dot' ).hasClass( "link-dot6" ) ) {
 
-        if($( '.link-bola2 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola3')[0].click();
-            $('.link-bola3 .bola').addClass("bola-ativada");
-            $('.link-bola2 .bola').removeClass("bola-ativada");
+        if($( '.link-dot2 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot3')[0].click();
+            $('.link-dot3 .dot').addClass("dot-ativada");
+            $('.link-dot2 .dot').removeClass("dot-ativada");
         }
 
-        else if($( '.link-bola3 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola4')[0].click();
-            $('.link-bola4 .bola').addClass("bola-ativada");
-            $('.link-bola3 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot3 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot4')[0].click();
+            $('.link-dot4 .dot').addClass("dot-ativada");
+            $('.link-dot3 .dot').removeClass("dot-ativada");
         } 
 
-        else if($( '.link-bola4 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola5')[0].click();
-            $('.link-bola5 .bola').addClass("bola-ativada");
-            $('.link-bola4 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot4 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot5')[0].click();
+            $('.link-dot5 .dot').addClass("dot-ativada");
+            $('.link-dot4 .dot').removeClass("dot-ativada");
         } 
 
-        else if($( '.link-bola5 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola6')[0].click();
-            $('.link-bola6 .bola').addClass("bola-ativada");
-            $('.link-bola5 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot5 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot6')[0].click();
+            $('.link-dot6 .dot').addClass("dot-ativada");
+            $('.link-dot5 .dot').removeClass("dot-ativada");
         } 
 
-        else if($( '.link-bola6 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola2')[0].click();
-            $('.link-bola2 .bola').addClass("bola-ativada");
-            $('.link-bola6 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot6 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot2')[0].click();
+            $('.link-dot2 .dot').addClass("dot-ativada");
+            $('.link-dot6 .dot').removeClass("dot-ativada");
         } 
     }
 
-    //checa qtd bolas 
-    else if( $( '.link-bola' ).hasClass( "link-bola5" ) ) {
+    //get dots quantity
+    else if( $( '.link-dot' ).hasClass( "link-dot5" ) ) {
 
-        if($( '.link-bola2 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola3')[0].click();
-            $('.link-bola3 .bola').addClass("bola-ativada");
-            $('.link-bola2 .bola').removeClass("bola-ativada");
+        if($( '.link-dot2 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot3')[0].click();
+            $('.link-dot3 .dot').addClass("dot-ativada");
+            $('.link-dot2 .dot').removeClass("dot-ativada");
         }
 
-        else if($( '.link-bola3 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola4')[0].click();
-            $('.link-bola4 .bola').addClass("bola-ativada");
-            $('.link-bola3 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot3 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot4')[0].click();
+            $('.link-dot4 .dot').addClass("dot-ativada");
+            $('.link-dot3 .dot').removeClass("dot-ativada");
         } 
 
-        else if($( '.link-bola4 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola5')[0].click();
-            $('.link-bola5 .bola').addClass("bola-ativada");
-            $('.link-bola4 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot4 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot5')[0].click();
+            $('.link-dot5 .dot').addClass("dot-ativada");
+            $('.link-dot4 .dot').removeClass("dot-ativada");
         } 
 
-        else if($( '.link-bola5 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola2')[0].click();
-            $('.link-bola2 .bola').addClass("bola-ativada");
-            $('.link-bola5 .bola').removeClass("bola-ativada");
-        } 
-
-    }
-
-    //checa qtd bolas 
-    else if( $( '.link-bola' ).hasClass( "link-bola4" ) ) {
-
-        if($( '.link-bola2 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola3')[0].click();
-            $('.link-bola3 .bola').addClass("bola-ativada");
-            $('.link-bola2 .bola').removeClass("bola-ativada");
-        }
-
-        else if($( '.link-bola3 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola4')[0].click();
-            $('.link-bola4 .bola').addClass("bola-ativada");
-            $('.link-bola3 .bola').removeClass("bola-ativada");
-        } 
-
-        else if($( '.link-bola4 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola2')[0].click();
-            $('.link-bola2 .bola').addClass("bola-ativada");
-            $('.link-bola4 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot5 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot2')[0].click();
+            $('.link-dot2 .dot').addClass("dot-ativada");
+            $('.link-dot5 .dot').removeClass("dot-ativada");
         } 
 
     }
 
-    //checa qtd bolas 
-    else if( $( '.link-bola' ).hasClass( "link-bola3" ) ) {
+    //get dots quantity
+    else if( $( '.link-dot' ).hasClass( "link-dot4" ) ) {
 
-        if($( '.link-bola2 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola3')[0].click();
-            $('.link-bola3 .bola').addClass("bola-ativada");
-            $('.link-bola2 .bola').removeClass("bola-ativada");
+        if($( '.link-dot2 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot3')[0].click();
+            $('.link-dot3 .dot').addClass("dot-ativada");
+            $('.link-dot2 .dot').removeClass("dot-ativada");
         }
 
-        else if($( '.link-bola3 .bola' ).hasClass( "bola-ativada" )) {
-            $('.link-bola2')[0].click();
-            $('.link-bola2 .bola').addClass("bola-ativada");
-            $('.link-bola3 .bola').removeClass("bola-ativada");
+        else if($( '.link-dot3 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot4')[0].click();
+            $('.link-dot4 .dot').addClass("dot-ativada");
+            $('.link-dot3 .dot').removeClass("dot-ativada");
+        } 
+
+        else if($( '.link-dot4 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot2')[0].click();
+            $('.link-dot2 .dot').addClass("dot-ativada");
+            $('.link-dot4 .dot').removeClass("dot-ativada");
+        } 
+
+    }
+
+    //get dots quantity
+    else if( $( '.link-dot' ).hasClass( "link-dot3" ) ) {
+
+        if($( '.link-dot2 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot3')[0].click();
+            $('.link-dot3 .dot').addClass("dot-ativada");
+            $('.link-dot2 .dot').removeClass("dot-ativada");
+        }
+
+        else if($( '.link-dot3 .dot' ).hasClass( "dot-ativada" )) {
+            $('.link-dot2')[0].click();
+            $('.link-dot2 .dot').addClass("dot-ativada");
+            $('.link-dot3 .dot').removeClass("dot-ativada");
         } 
 
 
     }
-
-
-
-    checaIntervalo = window.setTimeout(slideEm, 3000);
-    checaIntervalo;
 
 }   
 
@@ -173,50 +168,7 @@ function slideEm() {
 window.setTimeout(slideEm, 1000);
 
 
-
-/*scroll slider parallax*/
-$('.parallax50').each(function(){
-    var $obj = $(this);
-
-    $(window).scroll(function() {
-        var yPos = -($(window).scrollTop() / $obj.data('speed')); 
-
-        var bgpos = 50 + yPos + '%';
-
-        $obj.css('top', bgpos );
-
-    }); 
-});
-
-//ajusta play 
-$('.parallax42').each(function(){
-    var $obj = $(this);
-
-    $(window).scroll(function() {
-        var yPos = -($(window).scrollTop() / $obj.data('speed')); 
-
-        var bgpos = 42 + yPos + '%';
-
-        $obj.css('top', bgpos );
-
-    }); 
-});
-
-//slider mask adjust
-$('.parallax55').each(function(){
-    var $obj = $(this);
-
-    $(window).scroll(function() {
-        var yPos = -($(window).scrollTop() / $obj.data('speed')); 
-
-        var bgpos = 55 + yPos + '%';
-
-        $obj.css('top', bgpos );
-
-    }); 
-});
-
-
+//And to make my client happy, in the site I make up a parralax effect, may be it's still work.
 $('.parallax').each(function(){//div.parallax
     var $obj = $(this);
 

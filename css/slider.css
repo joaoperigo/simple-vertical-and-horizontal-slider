@@ -3,7 +3,6 @@
 .embed {
     position: relative;
     transform-origin: center;
-    /*transform: translateX(20px) scale(1.4) ;*/
     transform: translateX(0) scale(1.3) ;
     width: 100%;
     height: 100%;
@@ -28,7 +27,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    height: 100%;/*ver como ajustar alinhamento vettical*/
+    height: 100%;
 }
 .slider-wrapper-wrapper {
     left: 50%;
@@ -36,7 +35,7 @@
     position:absolute; 
 }
 .img-slider {
-    position:relative; /*fazer em jquery?*/ 
+    position:relative; 
     left:-50%;
     top: -540px;
     min-width: 1920px;
@@ -54,27 +53,25 @@
     /* bring your own prefixes */
     transform: translate(-50%, -49%) scale(1.05,1.05);
     opacity: 0.8;
-    /*ver como ajustar alinhamento vertical*/
-
 }
-.wrapper-bola {
+.wrapper-dot {
     position: fixed;
     right: 5%;
     z-index: 4;
     bottom: 5%;
     display: block;
 }
-.wrapper-bola a{
+.wrapper-dot a{
 
     display: block;
     margin-bottom: 1.3em;
 }
 
-.address-slider {
+/* .address-slider {
 
-}
+} */
 
-.bola {
+.dot {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -84,14 +81,14 @@
     border-radius: 50%;
     display: inline-block;
 }
-.bola:hover {
+.dot:hover {
     border: solid #bbb 0.3em;
     border-radius: 50%;
 }
-.bola-ativada {
+.dot-ativada {
     background-color: #e6efd2;
 }
-.link-bola { /*delimita tag <a>*/
+.link-dot {
     border-radius: 1.2em;
     width: 1.2em;
     height: 1.2em;   
@@ -122,7 +119,7 @@
 
 }
 .slider-size {
-    min-height: 97%; /*ajusta altura slider*/
+    min-height: 97%; /* adjust slider height */
     z-index: 10;
     position: relative;
     background-color: transparent;
